@@ -1,0 +1,16 @@
+{
+    "name": "SharePointBookmarklets",
+    "description": "Bookmarlets for SharePoint",
+    "version": "1.0.0",
+    "dependencies": {
+        "grunt": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-processhtml": "*",
+        "grunt-newer": "*",
+        "readdirp": "*",
+        "event-stream": "*",
+        "underscore-contrib": "*",
+        "string": "*"
+    }
+}

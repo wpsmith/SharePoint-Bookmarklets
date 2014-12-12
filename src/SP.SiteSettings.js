@@ -1,0 +1,15 @@
+/**
+ * Redirect's User to Site Settings
+ *
+ * Copyright (c) 2014, Travis Smith 2014
+ * @project SharePoint Booksmark
+ * @file SP.AddSPServices.js
+ * @author Travis Smith <me@travislsmith.com>
+ * @link http://travislsmith.com/sharepoint-bookmarks/
+ * @date 11/19/2014.
+ * @version 0.0.1
+ */
+
+(function(win){
+    w.location.href = ('undefined' !== typeof _spPageContextInfo ? _spPageContextInfo.webAbsoluteUrl : w.location.origin + L_Menu_BaseUrl) + "/_layouts/settings.aspx";
+})(window);
