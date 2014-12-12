@@ -27,7 +27,8 @@ module.exports = function (processor) {
             fs = require('fs'),
 //            _ = require('underscore-contrib'),
 //            S = require('string'),
-            ROOT_PATH = path.join(__dirname, '../src');
+            ROOT_PATH = path.join(__dirname, '../src'),
+            isIE = ( 'ie' === options.environment );
 
         var entries = fs.readdirSync(ROOT_PATH),
             fnames = entries.filter(function (element) {
@@ -45,8 +46,11 @@ module.exports = function (processor) {
             if ('undefined' !== typeof dirname) {
                 stat = fs.statSync(path.join(ROOT_PATH, dirname));
                 date = new Date(stat.mtime);
-                o += templates.folderOpen.replace('%%FOLDER_TITLE%%', dirname);
-//                o += templates.folderOpen.replace('%%FOLDER_TITLE%%', dirname).replace('%%DATE%%', date.valueOf());
+                if (!isIE) {
+                    o += templates.folderOpen.replace('%%FOLDER_TITLE%%', dirname);
+                } else {
+                    o += templates.ie.folderOpen.replace('%%FOLDER_TITLE%%', dirname).replace('%%DATE%%', date.valueOf());
+                }
             }
 
             // Bookmarklets
@@ -59,26 +63,30 @@ module.exports = function (processor) {
                     pathname = path.join(ROOT_PATH, entry);
                 }
 
-                // Safari escapes for us, so let's don't do it
-//                js = _.escape(fs.readFileSync(pathname, 'utf8'));
-//                js = encodeURI(fs.readFileSync(pathname, 'utf8'));
+                // Add Javascript Address
                 js = 'javascript:' + encodeURIComponent(fs.readFileSync(pathname, 'utf8'));
-//                if ( 'safari' === options.environment ) {
-//                    js = fs.readFileSync(pathname, 'utf8');
-//                } else {
-//
-//                }
+                if ( isIE ) {
+                    bm = templates.ie.bookmark;
+                } else {
+                    bm = templates.bookmark;
+                }
 
-                bm = templates.bookmark.replace('%%JS%%', js);
+                if ('undefined' !== typeof dirname) {
+                    bm = "\t" + bm;
+                }
+
+                bm = bm.replace('%%JS%%', js);
 
                 // Add title
                 title = entry.replace('SP.', '').replace('.min.js', '');
                 bm = bm.replace('%%TITLE%%', title);
 
                 // Add date
-//                stat = fs.statSync(pathname);
-//                date = new Date(stat.mtime);
-//                bm = bm.replace('%%DATE%%',date.valueOf());
+                if ( isIE ) {
+                    stat = fs.statSync(pathname);
+                    date = new Date(stat.mtime);
+                    bm = bm.replace(/%%DATE%%/g, date.valueOf());
+                }
 
                 o += bm;
 

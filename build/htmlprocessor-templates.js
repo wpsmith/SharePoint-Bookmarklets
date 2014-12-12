@@ -11,7 +11,11 @@
  */
 
 module.exports = {
-    bookmark: '<DT><A HREF="%%JS%%">%%TITLE%%</A>' + "\n",
-    folderClose: '</DL><p>' + "\n",
-    folderOpen: '<DT><H3>%%FOLDER_TITLE%%</H3>' + "\n" + '<DL><p>' + "\n"
+    ie: {
+        bookmark: "\t\t\t" + '<DT><A HREF="%%JS%%" ADD_DATE="%%DATE%%" LAST_VISIT="" LAST_MODIFIED="%%DATE%%" ICON_URI="http://travislsmith.com/spbookmarklets.png">%%TITLE%%</A>' + "\n",
+        folderOpen: "\t\t\t" + '<DT><H3 FOLDED ADD_DATE="%%DATE%%">%%FOLDER_TITLE%%</H3>' + "\n\t\t\t" + '<DL><p>' + "\n"
+    },
+    bookmark: "\t\t\t" + '<DT><A HREF="%%JS%%">%%TITLE%%</A>' + "\n",
+    folderClose: "\t\t\t" + '</DL><p>' + "\n",
+    folderOpen: "\t\t\t" + '<DT><H3>%%FOLDER_TITLE%%</H3>' + "\n" + '<DL><p>' + "\n"
 };
