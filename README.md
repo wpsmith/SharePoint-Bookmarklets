@@ -76,3 +76,6 @@ The bookmarks will be placed in a folder called **SP Bookmarklets**. If you woul
 ## Importing into IE
 Currently, importing the IEBookmarks into IE11 is not working. I have no idea why at the moment.
 
+# Contributing
+
+To contribute, please fork and submit a pull request. New bookmarklets should have their own JavaScript file within `src` folder as Grunt will take care of adding the bookmarklet to the bookmarks HTML files. Please feel free to add any issues
