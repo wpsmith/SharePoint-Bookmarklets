@@ -5,9 +5,19 @@ SharePoint Bookmarklets for Chrome, Firefox, Opera, IE, and Safari
 
 # Bookmarks
 
-All SharePoint Admin/Settings/Content URLs are available here, organized the same way the Site Settings are displayed. Extra bookmarklets include:
+All SharePoint Admin/Settings/Content URLs are available here, organized the same way the Site Settings are displayed. 
+
+## Extra Bookmarklets
+
+Extra bookmarklets include:
 * Add [SPServices](http://spservices.codeplex.com/)
 * Change User
+* Quick Deploy List
+* All People's Permissions
+* Filter Toolbar View
+* Quick Setup of Missing Default Groups
+* Site Usage
+* Site Usage Analytics - Monthly Reports
 * Create Admin Page
 * Edit Page
 * Get Fields (gets a specified list's fields)
@@ -20,10 +30,13 @@ All SharePoint Admin/Settings/Content URLs are available here, organized the sam
 * Site Settings
 * Taxonomy Hidden List
 * User Information List
+* User Information List Detailed View
 * User Profile Forced Display
 * Web Parts Maintenance Page Contents
 * Workflow History
 * Workflows
+
+## SharePoint Administration Bookmarklets
 
 # How to Use
 
