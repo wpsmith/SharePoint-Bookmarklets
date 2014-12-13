@@ -12,4 +12,4 @@
 
 (function (w) {
     w.location.href = ('undefined' !== typeof _spPageContextInfo ? _spPageContextInfo.webAbsoluteUrl : w.location.origin + L_Menu_BaseUrl) + "/_vti_pvt/Service.cnf";
-})(window)
+})(window);
