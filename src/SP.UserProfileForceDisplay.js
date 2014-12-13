@@ -11,5 +11,6 @@
  */
 
 (function (w) {
-    w.location.href = ('undefined' !== typeof _spPageContextInfo ? _spPageContextInfo.webAbsoluteUrl : w.location.origin + L_Menu_BaseUrl) + "/_layouts/userdisp.aspx?id={UserID}&Force=True";
+    var userID = w.prompt("Please enter the user's SharePoint ID", "2");
+    w.location.href = ('undefined' !== typeof _spPageContextInfo ? _spPageContextInfo.webAbsoluteUrl : w.location.origin + L_Menu_BaseUrl) + "/_layouts/userdisp.aspx?id=" + userID + "&Force=True";
 })(window)
