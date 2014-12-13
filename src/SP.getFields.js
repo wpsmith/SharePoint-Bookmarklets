@@ -25,7 +25,7 @@
     };
     var iList = w.prompt("Please enter the list name", "Tasks");
     var a = jQuery.ajax({
-        url: _spPageContextInfo.webAbsoluteUrl + "/_api/lists/getbytitle('" + iList + "')?$select=Fields&$expand=Fields",
+            url: _spPageContextInfo.webAbsoluteUrl + "/_api/lists/getbytitle('" + iList + "')?$select=Fields&$expand=Fields",
         type: "POST",
         contentType: "application/json;odata=verbose",
         headers: requestHeaders,
