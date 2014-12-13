@@ -20,9 +20,9 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'dist/ChromeBookmarks.html': ['templates/ChromeOperaBookmarks.html'],
+                    'dist/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html'],
                     'dist/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html'],
-                    'dist/IEBookmarks.html': ['templates/IEBookmarks.html'],
+                    'dist/IEBookmarks.htm': ['templates/IEBookmarks.html'],
                     'dist/SafariBookmarks.html': ['templates/SafariBookmarks.html']
                 }
             },
