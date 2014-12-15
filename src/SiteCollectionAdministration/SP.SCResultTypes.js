@@ -2,7 +2,8 @@
  * Redirects Users to ResultTypes
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName
  * @file ResultTypes.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

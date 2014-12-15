@@ -2,7 +2,8 @@
  * Redirects users to the Workflows page.
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName
  * @file SP.Workflows.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

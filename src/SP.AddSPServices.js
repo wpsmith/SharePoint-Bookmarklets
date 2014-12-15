@@ -2,7 +2,8 @@
  * Adds SPServices.js and provides basic information on the current user and site.
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Booksmark
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Add SP Services
  * @file SP.AddSPServices.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

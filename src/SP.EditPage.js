@@ -1,8 +1,9 @@
 /**
- * Description
+ * Initiates Editing Page
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Edit Page
  * @file SP.EditPage.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

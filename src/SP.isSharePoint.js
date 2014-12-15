@@ -2,7 +2,8 @@
  * Determines whether the current page is SharePoint
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Booksmark
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Is this SharePoint?
  * @file SP.AddSPServices.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

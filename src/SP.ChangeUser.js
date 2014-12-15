@@ -1,8 +1,9 @@
 /**
- * Redirects Users to SP.ChangeUser
+ * Redirects Users to Change User
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Change User
  * @file SP.ChangeUser.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

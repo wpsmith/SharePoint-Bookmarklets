@@ -1,8 +1,9 @@
 /**
- * Redirects Users to SP.ResultTypesSite
+ * Redirects Users to Result Types (Site)
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Result Types (Site)
  * @file SP.ResultTypesSite.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

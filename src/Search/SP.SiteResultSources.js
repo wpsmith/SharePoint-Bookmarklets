@@ -2,7 +2,8 @@
  * Redirects Users to Result Sources (Site)
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Result Sources (Site)
  * @file SP.ResultSourcesSite.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

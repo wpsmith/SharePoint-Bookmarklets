@@ -1,8 +1,9 @@
 /**
- * Redirects Users to ContentTypePublishing
+ * Redirects Users to Content Type Publishing
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Content Type Publishing
  * @file ContentTypePublishing.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

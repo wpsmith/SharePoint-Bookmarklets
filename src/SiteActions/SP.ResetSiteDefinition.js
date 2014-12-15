@@ -1,8 +1,9 @@
 /**
- * Redirects Users to ResetSiteDefinition
+ * Redirects Users to Reset Site Definition
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Reset Site Definition
  * @file ResetSiteDefinition.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

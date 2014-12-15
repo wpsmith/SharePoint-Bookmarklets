@@ -1,8 +1,9 @@
 /**
- * Redirects Users to SearchableColumns
+ * Redirects Users to Searchable Columns
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Searchable Columns
  * @file SearchableColumns.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

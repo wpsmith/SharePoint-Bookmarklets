@@ -2,7 +2,8 @@
  * Provides the List's Field Information, including Internal Name, via the console.
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Booksmark
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Get List's Fields
  * @file SP.AddSPServices.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
@@ -12,7 +13,7 @@
 
 (function (w) {
 
-    if ("undefined" !== typeof jQuery) {
+    if ("undefined" === typeof jQuery) {
         var jq = document.createElement("script");
         jq.type = "text/javascript";
         jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";

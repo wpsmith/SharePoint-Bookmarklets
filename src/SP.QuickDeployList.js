@@ -1,8 +1,9 @@
 /**
- * Redirects Users to SP.QuickDeployList
+ * Redirects Users to Quick Deploy List
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Quick Deploy List
  * @file SP.QuickDeployList.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

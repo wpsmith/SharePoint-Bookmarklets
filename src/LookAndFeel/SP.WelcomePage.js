@@ -1,8 +1,9 @@
 /**
- * Redirects Users to WelcomePage
+ * Redirects Users to Welcome Page
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Welcome Page
  * @file WelcomePage.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

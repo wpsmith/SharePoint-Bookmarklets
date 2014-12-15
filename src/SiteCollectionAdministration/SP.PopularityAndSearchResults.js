@@ -1,8 +1,9 @@
 /**
- * Redirects Users to PopularityAndSearchResults
+ * Redirects Users to Popularity And Search Results
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Popularity And Search Results
  * @file PopularityAndSearchResults.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

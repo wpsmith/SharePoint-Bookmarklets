@@ -1,8 +1,9 @@
 /**
- * Redirects Users to PageLayoutsAndSiteTemplates
+ * Redirects Users to Page Layouts And Site Templates
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Page Layouts And Site Templates
  * @file PageLayoutsAndSiteTemplates.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

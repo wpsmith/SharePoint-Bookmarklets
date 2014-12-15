@@ -1,8 +1,9 @@
 /**
- * Redirects Users to AuditLogReports
+ * Redirects Users to Audit Log Reports
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Audit Log Reports
  * @file AuditLogReports.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

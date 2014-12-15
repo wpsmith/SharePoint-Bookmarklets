@@ -1,8 +1,9 @@
 /**
- * Redirects Users to PortalSiteConnection
+ * Redirects Users to Portal Site Connection
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Portal Site Connection
  * @file PortalSiteConnection.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

@@ -2,7 +2,8 @@
  * Redirects user to Create
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Booksmark
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Create
  * @file SP.AddSPServices.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

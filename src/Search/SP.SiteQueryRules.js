@@ -1,9 +1,10 @@
 /**
- * Redirects Users to SP.QueryRullesSite
+ * Redirects Users to Query Rules Site
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
- * @file SP.QueryRullesSite.js
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Query Rules Site
+ * @file SP.QueryRulesSite.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
  * @date 12/11/2014.

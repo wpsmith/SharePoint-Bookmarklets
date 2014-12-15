@@ -1,8 +1,9 @@
 /**
- * Redirects Users to SP.SiteSecurityAll
+ * Redirects Users to Site Security All
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Site Security (All)
  * @file SP.SiteSecurityAll.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

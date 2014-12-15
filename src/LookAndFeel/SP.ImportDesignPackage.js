@@ -1,8 +1,9 @@
 /**
- * Redirects Users to ImportDesignPackage
+ * Redirects Users to Import Design Package
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Import Design Package
  * @file ImportDesignPackage.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

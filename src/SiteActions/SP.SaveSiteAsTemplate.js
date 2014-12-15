@@ -1,8 +1,9 @@
 /**
- * Redirects Users to SaveSiteAsTemplate
+ * Redirects Users to Save Site As Template
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Save Site As Template
  * @file SaveSiteAsTemplate.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

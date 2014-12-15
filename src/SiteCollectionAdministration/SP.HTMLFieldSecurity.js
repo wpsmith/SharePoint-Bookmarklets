@@ -1,8 +1,9 @@
 /**
- * Redirects Users to HTMLFieldSecurity
+ * Redirects Users to HTML Field Security
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName HTML Field Security
  * @file HTMLFieldSecurity.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

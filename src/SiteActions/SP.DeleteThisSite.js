@@ -1,8 +1,9 @@
 /**
- * Redirects Users to DeleteThisSite
+ * Redirects Users to Delete This Site
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Delete This Site
  * @file DeleteThisSite.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

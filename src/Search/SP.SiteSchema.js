@@ -1,9 +1,10 @@
 /**
- * Redirects Users to SP.SchemeSite
+ * Redirects Users to Schema (Site)
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Bookmarks
- * @file SP.SchemeSite.js
+ * @project SharePoint Booksmarklets
+ * @bookmarkletName Schema (Site)
+ * @file SP.SchemaSite.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
  * @date 12/11/2014.
