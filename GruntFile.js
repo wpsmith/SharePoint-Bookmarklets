@@ -10,9 +10,14 @@
  * @version 0.0.1
  */
 
+/**
+ * @todo Chrome - modify bookmarks file (%APPDATA%\..\Local\Google\Chrome\User Data\Default\Bookmarks,%APPDATA%\..\Local\Google\Chrome\User Data\Default\Bookmarks.bak) directly
+ */
 module.exports = function (grunt) {
 
     grunt.initConfig({
+
+        // Create Bookmarks html File
         processhtml: {
             dist: {
                 options: {
@@ -20,10 +25,10 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'dist/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html'],
-                    'dist/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html'],
-                    'dist/IEBookmarks.htm': ['templates/IEBookmarks.html'],
-                    'dist/SafariBookmarks.html': ['templates/SafariBookmarks.html']
+                    'temp/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html'],
+                    'temp/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html'],
+                    'temp/IEBookmarks.htm': ['templates/IEBookmarks.html'],
+                    'temp/SafariBookmarks.html': ['templates/SafariBookmarks.html']
                 }
             },
             chrome: {
@@ -32,7 +37,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'dist/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html']
+                    'temp/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html']
                 }
             },
             firefox: {
@@ -41,7 +46,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'dist/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html']
+                    'temp/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html']
                 }
             },
             ie: {
@@ -50,7 +55,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'dist/IEBookmarks.htm': ['templates/IEBookmarks.html']
+                    'temp/IEBookmarks.htm': ['templates/IEBookmarks.html']
                 }
             },
             safari: {
@@ -59,18 +64,35 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'dist/SafariBookmarks.html': ['templates/SafariBookmarks.html']
+                    'temp/SafariBookmarks.html': ['templates/SafariBookmarks.html']
                 }
             }
         },
 
         // Clean Files
         clean: {
+            temp: ['temp/*.*'],
             files: ['dist/*.*'],
             chrome : ['dist/ChromeBookmarks.html'],
             firefox: ['dist/FirefoxBookmarks.html'],
             ie: ['dist/IEBookmarks.htm'],
             safari: ['dist/SafariBookmarks.html'],
+        },
+
+        // Add HeadJS replacing
+        includereplace: {
+            headLoad: {
+                options: {
+                    globals: {
+                        headjs: '<%= grunt.file.read("libraries/head.load.min.js") %>'
+                    },
+                    prefix: '<!-- @@',
+                    suffix: ' -->',
+                    includesDir: 'src/'
+                },
+                src: 'src/*.min.js',
+                dest: 'temp/'
+            }
         },
 
         // Default task
@@ -82,10 +104,16 @@ module.exports = function (grunt) {
                     'package.json'
                 ]
             },
-
+            replace: {
+                files: ['temp/*.htm*'],
+                tasks: [
+                    'includereplace',
+                ]
+            },
             chrome: {
                 files: ['templates/ChromeBookmarks.html'],
                 tasks: [
+                    'clean:temp',
                     'clean:chrome',
                     'processhtml:chrome'
                 ]
@@ -93,6 +121,7 @@ module.exports = function (grunt) {
             firefox: {
                 files: ['templates/FirefoxBookmarks.html'],
                 tasks: [
+                    'clean:temp',
                     'clean:firefox',
                     'processhtml:firefox'
                 ]
@@ -100,6 +129,7 @@ module.exports = function (grunt) {
             ie: {
                 files: ['templates/IEBookmarks.html'],
                 tasks: [
+                    'clean:temp',
                     'clean:ie',
                     'processhtml:ie'
                 ]
@@ -107,6 +137,7 @@ module.exports = function (grunt) {
             safari: {
                 files: ['templates/SafariBookmarks.html'],
                 tasks: [
+                    'clean:temp',
                     'clean:safari',
                     'processhtml:safari'
                 ]
@@ -129,6 +160,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-include-replace');
 
     grunt.registerTask('default', [
         'watch'
