@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2014, Travis Smith 2014
  * @project SharePoint Bookmarks
- * @bookmarkletName SP.EditListByName
+ * @bookmarkletName Edit List By Name
  * @file SP.EditListByName.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
@@ -11,22 +11,10 @@
  * @version 0.0.1
  */
 
+___headjs___
+
 // @todo Add setTimeout
 (function (w) {
-    <!-- @@head.load.min.js -->
-
-    //https://sharedservicestest.rndc-usa.com/_layouts/15/listedit.aspx?List=%7B5ea1442d-e1c7-4273-bd9c-93b2a0b15c10%7D
-    if ("undefined" === typeof jQuery) {
-        var jq = document.createElement("script");
-        jq.type = "text/javascript";
-        jq.src = "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
-        document.getElementsByTagName("head")[0].appendChild(jq)
-    }
-
-    setTimeout(
-        function(){ alert("Hello"); },
-        3000
-    );
 
     var requestHeaders = {
         "Accept": "application/json;odata=verbose",
@@ -41,7 +29,7 @@
         success: function (data) {
             console.log(data);
 
-            w.location.href = _spPageContextInfo.webAbsoluteUrl + "/_layouts/listedit.aspx?List=" + encodeURI( data.d.Id );
+            w.location.href = _spPageContextInfo.webAbsoluteUrl + "/_layouts/listedit.aspx?List=" + encodeURI( '{' + data.d.Id + '}' );
         },
         error: function (jqxr, errorCode, errorThrown) {
             console.log(jqxr.responseText);
@@ -49,4 +37,4 @@
         }
     });
 
-})(window)
+})(window);
