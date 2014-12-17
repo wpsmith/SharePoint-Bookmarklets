@@ -38,16 +38,34 @@ module.exports = function (processor) {
                 return !element.contains('.js');
             });
 
+        var getTitle = function( pathname, entry, stat ) {
+            var title = '', metaFile = '', metaContents = '', match = '';
+            metaFile = pathname.replace('.min.js', '.js');
+            stat = fs.statSync(metaFile);
+            metaContents = fs.readFileSync(metaFile, { encoding: 'utf8'}, function (err, data) {
+                if (err) throw err;
+                //console.log(data);
+            });
+            match = /@bookmarkletName\s(.*)/.exec(metaContents);
+            if ( match[1] ) {
+                title = match[1];
+            } else {
+                title = entry.replace('SP.', '').replace('.min.js', '');
+            }
+
+            return title;
+        };
+
         var processDir = function (entries, dirname) {
 
-            var o = '', stat, date, bm = '', pathname = '', title = '', js = '';
+            var o = '', stat, date, bm = '', pathname = '', title = '', metaFile = '', js = '';
 
             // Folder Open
             if ('undefined' !== typeof dirname) {
                 stat = fs.statSync(path.join(ROOT_PATH, dirname));
                 date = new Date(stat.mtime);
                 if (!isIE) {
-                    o += templates.folderOpen.replace('%%FOLDER_TITLE%%', dirname);
+                    o += templates.folderOpen.replace('%%FOLDER_TITLE%%', dirname.replace(/([A-Z])/g, " $1").trim());
                 } else {
                     o += templates.ie.folderOpen.replace('%%FOLDER_TITLE%%', dirname).replace('%%DATE%%', date.valueOf());
                 }
@@ -78,8 +96,8 @@ module.exports = function (processor) {
                 bm = bm.replace('%%JS%%', js);
 
                 // Add title
-                title = entry.replace('SP.', '').replace('.min.js', '');
-                bm = bm.replace('%%TITLE%%', title);
+
+                bm = bm.replace('%%TITLE%%', getTitle(pathname,entry,stat));
 
                 // Add date
                 if ( isIE ) {
