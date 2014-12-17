@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2014, Travis Smith 2014
  * @project SharePoint Booksmarklets
- * @bookmarkletName
+ * @bookmarkletName Site Usage Analytics (Monthly)
  * @file SP.SiteUsageAnalytics.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/

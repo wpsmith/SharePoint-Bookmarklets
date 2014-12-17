@@ -3,8 +3,8 @@
  *
  * Copyright (c) 2014, Travis Smith 2014
  * @project SharePoint Booksmarklets
- * @bookmarkletName
- * @file SP.AddSPServices.js
+ * @bookmarkletName Site Contents
+ * @file SP.SiteContents.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
  * @date 11/19/2014.

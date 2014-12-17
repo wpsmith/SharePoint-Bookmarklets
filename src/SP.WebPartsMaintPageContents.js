@@ -3,8 +3,8 @@
  *
  * Copyright (c) 2014, Travis Smith 2014
  * @project SharePoint Booksmarklets
- * @bookmarkletName
- * @file Web Parts Maintenance Page (Contents).js
+ * @bookmarkletName Web Parts Maintenance Page (Contents)
+ * @file EditListByName.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
  * @date 12/11/2014.
