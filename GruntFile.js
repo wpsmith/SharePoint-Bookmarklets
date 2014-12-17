@@ -25,10 +25,10 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'temp/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html'],
-                    'temp/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html'],
-                    'temp/IEBookmarks.htm': ['templates/IEBookmarks.html'],
-                    'temp/SafariBookmarks.html': ['templates/SafariBookmarks.html']
+                    'dist/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html'],
+                    'dist/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html'],
+                    'dist/IEBookmarks.htm': ['templates/IEBookmarks.html'],
+                    'dist/SafariBookmarks.html': ['templates/SafariBookmarks.html']
                 }
             },
             chrome: {
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'temp/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html']
+                    'dist/ChromeOperaBookmarks.html': ['templates/ChromeOperaBookmarks.html']
                 }
             },
             firefox: {
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'temp/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html']
+                    'dist/FirefoxBookmarks.html': ['templates/FirefoxBookmarks.html']
                 }
             },
             ie: {
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'temp/IEBookmarks.htm': ['templates/IEBookmarks.html']
+                    'dist/IEBookmarks.htm': ['templates/IEBookmarks.html']
                 }
             },
             safari: {
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
                     customBlockTypes: ['build/htmlprocessor-bookmarks.js']
                 },
                 files: {
-                    'temp/SafariBookmarks.html': ['templates/SafariBookmarks.html']
+                    'dist/SafariBookmarks.html': ['templates/SafariBookmarks.html']
                 }
             }
         },
@@ -76,22 +76,26 @@ module.exports = function (grunt) {
             chrome : ['dist/ChromeBookmarks.html'],
             firefox: ['dist/FirefoxBookmarks.html'],
             ie: ['dist/IEBookmarks.htm'],
-            safari: ['dist/SafariBookmarks.html'],
+            safari: ['dist/SafariBookmarks.html']
         },
 
         // Add HeadJS replacing
         includereplace: {
-            headLoad: {
-                options: {
-                    globals: {
-                        headjs: '<%= grunt.file.read("libraries/head.load.min.js") %>'
-                    },
-                    prefix: '<!-- @@',
-                    suffix: ' -->',
-                    includesDir: 'src/'
+            options: {
+                globals: {
+                    headjs: '<%= grunt.file.read("libraries/head.load.min.js") %>',
+                    test: 'TESTING123'
                 },
-                src: 'src/*.min.js',
-                dest: 'temp/'
+                prefix: '___',
+                suffix: '___',
+                includesDir: '',
+                debug: true
+            },
+            headLoad: {
+                expand: true,
+                cwd: 'src/',
+                src: ['*.min.js','*/*.min.js'],
+                dest: 'src/'
             }
         },
 
@@ -104,10 +108,10 @@ module.exports = function (grunt) {
                     'package.json'
                 ]
             },
-            replace: {
-                files: ['temp/*.htm*'],
+            includereplace: {
+                files: ['libraries/*.js','src/*.min.js','src/*/*.min.js'],
                 tasks: [
-                    'includereplace',
+                    'includereplace'
                 ]
             },
             chrome: {
@@ -149,7 +153,7 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'clean',
-                    ''
+                    'processhtml:dist'
                 ]
             }
         }
