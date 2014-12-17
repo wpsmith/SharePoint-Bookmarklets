@@ -2,7 +2,7 @@
  * Redirects user to ...
  *
  * Copyright (c) 2014, Travis Smith 2014
- * @project SharePoint Booksmark
+ * @project SharePoint Booksmarklets
  * @file SP.AddSPServices.js
  * @author Travis Smith <me@travislsmith.com>
  * @link http://travislsmith.com/sharepoint-bookmarks/
